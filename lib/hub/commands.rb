@@ -849,7 +849,7 @@ module Hub
       end
       files = nil
       Dir.chdir(directory) do 
-        files = Dir.glob("**/*") 
+        files = Dir.glob("{**/*,**/.*}") 
       end
       files.each do |rel_path| 
         if not File.exists?(rel_path)
